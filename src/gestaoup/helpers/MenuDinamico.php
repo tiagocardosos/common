@@ -1,6 +1,6 @@
 <?php
 
-namespace common\helpers;
+namespace gestaoup\helpers;
 
 use Yii;
 use yii\caching\TagDependency;

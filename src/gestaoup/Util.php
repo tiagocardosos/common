@@ -1,5 +1,6 @@
 <?php
-namespace common;
+namespace gestaoup;
+
 use Yii;
 
 class Util 
