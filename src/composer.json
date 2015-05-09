@@ -9,5 +9,10 @@
             "name": "Ulisses Vaquero",
             "homepage": "http://github.com/ulissesvaquero"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-0": {
+            "common": "src/"
+        }
+    }
 }
