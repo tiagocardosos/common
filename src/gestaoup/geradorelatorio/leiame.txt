@@ -1,0 +1,27 @@
+COMO USAR!
+
+//Objeto coluna relatorio
+    	$dddC = new ColumnRelatorio();
+    	$dddC->setAttributes(['ddd','link']);
+    	
+    	#$dddC->addAttribute('ddd');
+    	#$dddC->addAttribute('link');
+    	
+    	//Nome que irá aparecer no header
+    	$dddC->label = 'LINK E DDD';
+    	
+    	//Função que ira renderizar a coluna
+    	$dddC->formatFunction = function($value)
+    	{
+    		return $value['ddd'].'<br><br>'.$value['link'];
+    	};
+    	
+    	
+    	$linkC = new ColumnRelatorio();
+    	$linkC->addAttribute('link');
+    	
+    	
+    	$rb = new RelatorioBuilder();
+    	$rb->setColumns([$dddC,$linkC]);
+    	$rb->setSql('select * from link_estado');
+    	echo $rb->build();
